@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALINDROME</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function isPal(n){
+            n=n.toString();
+            return n==n.split('').reverse().join('');
+        }
+
+        
+        var n;
+        
+        do{
+            n=parseInt(prompt("Enter a five digit number:"));
+
+            if(isNaN(n)||n<10000||n>99999){
+            alert("Please enter a 5 digit number");
+        }
+        else{
+            if(isPal(n)){
+                alert(n+" is a Palindrome number")
+            }
+            else{
+                alert(n+" is not a palindorme number")
+            }
+            break;
+        }
+        }while(true);
+       
+    </script>
+    
+</body>
+</html>
